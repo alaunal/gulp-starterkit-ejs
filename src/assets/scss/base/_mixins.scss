@@ -1,5 +1,4 @@
 // PX to REM - Usage: font-size: rem(37px);
 @function rem($px, $base: $font-base-size) {
-    @return ($px / $base) * 1rem;
-  }
-  
+  @return ($px / $base) * 1rem;
+}
