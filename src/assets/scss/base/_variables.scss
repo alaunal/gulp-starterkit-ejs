@@ -23,26 +23,26 @@ $font-base-size: 16px;
 $font-base-line-height: 1.5em !default;
 $font-scale: 1.414 !default;
 
-$font-paths: '/static/fonts/source-sans/';
+$font-paths: '/static/fonts/ponder/';
 $icon-paths: '/static/fonts/icons/';
 $font-colection: (
-  Black: 'SourceSansPro-Black',
-  Bold: 'SourceSansPro-Bold',
-  Regular: 'SourceSansPro-Regular',
-  Light: 'SourceSansPro-Light',
-  ExtraLight: 'SourceSansPro-ExtraLight',
-  SemiBold: 'SourceSansPro-SemiBold'
+  Black: 'Ponder-Black',
+  Bold: 'Ponder-Bold',
+  Regular: 'Ponder-Regular',
+  Light: 'Ponder-Light',
+  Thin: 'Ponder-Thin',
+  Medium: 'Ponder-Medium'
 ) !default;
 
-$font-fm-base: 'SourceSansPro-Regular', sans-serif;
-$font-fm-bold: 'SourceSansPro-Bold', sans-serif;
-$font-fm-SemiBold: 'SourceSansPro-SemiBold', sans-serif;
-$font-fm-Black: 'SourceSansPro-Black', sans-serif;
-$font-fm-light: 'SourceSansPro-Light', sans-serif;
-$font-fm-ExtraLight: 'SourceSansPro-ExtraLight', sans-serif;
+$font-fm-base: 'Ponder-Regular', sans-serif;
+$font-fm-bold: 'Ponder-Bold', sans-serif;
+$font-fm-medium: 'Ponder-Medium', sans-serif;
+$font-fm-black: 'Ponder-Black', sans-serif;
+$font-fm-light: 'Ponder-Light', sans-serif;
+$font-fm-thin: 'Ponder-Thin', sans-serif;
 
 $paragraph-color: var(--color-black80);
-$paragraph-size: 18px;
+$paragraph-size: 16px;
 $paragraph-line-height: $font-base-line-height;
 $paragraph-margin: 16px;
 

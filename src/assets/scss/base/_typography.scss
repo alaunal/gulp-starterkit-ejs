@@ -9,7 +9,7 @@ body {
   -moz-osx-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  letter-spacing: 1px;
+  letter-spacing: normal;
 }
 
 // Headers
@@ -31,7 +31,7 @@ h6 {
 h1 {
   font-size: rem($header-size);
   margin-bottom: $header-margin;
-  font-family: $font-fm-Black;
+  font-family: $font-fm-black;
   color: var(--color-black100);
 
   em {
@@ -42,7 +42,7 @@ h1 {
 h2 {
   font-size: rem($header-size - 8px);
   margin-bottom: $header-margin / 1.2;
-  font-family: $font-fm-Black;
+  font-family: $font-fm-black;
   color: var(--color-black100);
 
   em {
@@ -75,7 +75,7 @@ h4 {
 h5 {
   font-size: rem($header-size - 30px);
   margin-bottom: $header-margin / 1.8;
-  font-family: $font-fm-SemiBold;
+  font-family: $font-fm-bold;
   color: $header-color;
 
   em {
@@ -86,7 +86,7 @@ h5 {
 h6 {
   font-size: rem($header-size - 36px);
   margin-bottom: $header-margin / 2;
-  font-family: $font-fm-SemiBold;
+  font-family: $font-fm-bold;
   color: $header-color;
 
   em {
@@ -197,4 +197,7 @@ sub {
 a {
   text-decoration: none;
   color: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  font-family: inherit;
 }
