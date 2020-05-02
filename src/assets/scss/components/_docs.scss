@@ -110,17 +110,35 @@
   }
 
   &__heading {
-    font-size: rem(38px);
+    font-size: rem(36px);
     font-family: $font-fm-medium;
-    color: var(--color-black60);
+    color: var(--color-black70);
     line-height: 1.4;
   }
 
   &__headline {
-    font-size: rem(24px);
+    font-size: rem(28px);
     font-family: $font-fm-light;
     color: var(--color-black80);
     line-height: 1.4;
     margin: 0;
+  }
+
+  &__color-card {
+    width: 180px;
+    height: 208px;
+    display: inline-block;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    border-radius: 4px;
+    z-index: -1;
+
+    .body {
+      position: absolute;
+      width: 100%;
+      bottom: 4px;
+      background: var(--color-white100);
+      padding: 16px;
+    }
   }
 }

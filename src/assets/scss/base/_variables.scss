@@ -10,17 +10,27 @@
   --color-black20: #f7f7f7;
   --color-white100: #ffffff;
   --color-orange100: #f77f00;
+  --color-orange80: #f99933;
+  --color-orange60: #fab266;
   --color-blue100: #003049;
-  --color-blue80: #05668d;
+  --color-blue80: #33596d;
+  --color-blue50: #05668d;
+  --color-blue30: #3785a4;
   --color-red100: #d62828;
+  --color-red80: #de5353;
+  --color-red60: #e67e7e;
   --color-green100: #02c39a;
+  --color-green80: #35cfae;
+  --color-green60: #67dbc2;
   --color-yellow100: #fcbf49;
+  --color-yellow80: #fdcc6d;
+  --color-yellow60: #fedfa4;
 }
 
 // -- TYPOGRAPHY VARIABLE
 
 $font-base-size: 16px;
-$font-base-line-height: 1.5em !default;
+$font-base-line-height: 1.5 !default;
 $font-scale: 1.414 !default;
 
 $font-paths: '/static/fonts/ponder/';
@@ -47,6 +57,6 @@ $paragraph-line-height: $font-base-line-height;
 $paragraph-margin: 16px;
 
 $header-color: var(--color-black80);
-$header-size: 56px;
-$header-line-height: 1.25em;
+$header-size: 48px;
+$header-line-height: 1.25;
 $header-margin: $paragraph-margin * 1.2;
