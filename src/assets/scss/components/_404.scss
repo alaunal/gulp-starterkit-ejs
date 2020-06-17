@@ -1,0 +1,65 @@
+.c-404 {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(45deg, var(--color-orange100), var(--color-orange80));
+
+  &__wrapper {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    bottom: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background: url('/static/images/p404.png') var(--color-blue100);
+    box-shadow: 0 15px 30px rgba(0,0,0, .5);
+    transition: all 0.15s ease-in-out;
+  }
+
+  &__content {
+    max-width: 600px;
+    text-align: center;
+  }
+
+  &__heading {
+    font-size: 11vw;
+    font-family: $font-fm-black;
+    color: var(--color-white100);
+    letter-spacing: 1.5px;
+    line-height: 1;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-family: $font-fm-light;
+    background-color: var(--color-white100);
+    color: var(--color-blue100);
+    padding: 12px 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+  }
+
+  &__desc {
+    font-size: rem(16px);
+    font-family: $font-fm-light;
+    color: var(--color-white100);
+  }
+
+  &__cta {
+    position: relative;
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--color-red80);
+    color: var(--color-white100);
+    text-decoration: none;
+    margin-top: 2rem;
+    border-radius: 26px;
+    transition: all 0.25s ease-in-out;
+
+    &:hover {
+      background-color: var(--color-red100);
+    }
+  }
+}
