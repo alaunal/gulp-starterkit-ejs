@@ -24,7 +24,7 @@ import runSequence from "gulp4-run-sequence";
 import notify from "gulp-notify";
 import plumber from "gulp-plumber";
 import cache from "gulp-cached";
-import workbox from "workbox-build";
+import path from "path";
 
 // -- Config
 
@@ -55,16 +55,12 @@ import named from "vinyl-named";
 import ejs from "gulp-ejs";
 import browserSync from "browser-sync";
 import beautify from "gulp-jsbeautifier";
-import data from "gulp-data";
 
 
 // ---------------------------------------------------
 // -- FUNCTION OF HELPERS
 // ---------------------------------------------------
 
-// -- Environment configuration.
-
-const isProd = process.env.NODE_ENV === 'production';
 
 // -- node sass compiler
 
@@ -88,6 +84,11 @@ const arg = (argList => {
     }
     return arg;
 })(process.argv);
+
+
+// -- Environment configuration.
+
+const isProd = arg.production === true;
 
 
 // -- error handler
@@ -178,11 +179,26 @@ gulp.task('compile-styles', done => {
 gulp.task('compile-scripts', done => {
     if (!cfg.settings.scripts) return done();
 
+    const pathResolve = path.resolve(__dirname, cfg.paths.scripts.output);
+
+    console.log(pathResolve);
+
+
     return gulp.src(cfg.paths.scripts.input)
         .pipe(plumber(errorHandler))
         .pipe(named())
         .pipe(webpackStream({
-            mode: 'production'
+            mode: 'production',
+            output: {
+                chunkFilename: '[hash].modules.js',
+                publicPath: "static/js/",
+                path: path.resolve(__dirname, "static/js"),
+            },
+            optimization: {
+                splitChunks: {
+                    chunks: 'all',
+                },
+            },
         }, webpack))
         .pipe(isProd ? noop() : sourcemaps.init())
         .pipe(babel())
@@ -232,39 +248,39 @@ gulp.task('copy-static', () => {
 // -- Compile task runner
 
 gulp.task('gulp:compile', function(callback) {
-  runSequence(
-      'clear-cache',
-      'compile-styles',
-      'compile-scripts',
-      'copy-static',
-      'compile-html',
-      callback
-  );
+    runSequence(
+        'clear-cache',
+        'compile-styles',
+        'compile-scripts',
+        'copy-static',
+        'compile-html',
+        callback
+    );
 });
 
 // -- watch task runner
 
 gulp.task('gulp:watch', () => {
-  gulp.watch(cfg.paths.src, callback => {
-      runSequence(
-          'gulp:compile',
-          'reload',
-          callback
-      );
-  });
+    gulp.watch(cfg.paths.src, callback => {
+        runSequence(
+            'gulp:compile',
+            'reload',
+            callback
+        );
+    });
 });
 
 
 // -- task serve
 
 gulp.task('gulp:serve', (callback) => {
-  runSequence(
-      'gulp:compile',
-      [
-          'runServer', 'gulp:watch'
-      ],
-      callback
-  );
+    runSequence(
+        'gulp:compile',
+        [
+            'runServer', 'gulp:watch'
+        ],
+        callback
+    );
 });
 
 // -- task default
