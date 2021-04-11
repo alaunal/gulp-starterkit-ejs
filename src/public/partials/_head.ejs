@@ -3,18 +3,20 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title><%= base.title %></title>
 
-<meta property="og:title" content="" />
+<meta name="description" content="<%= base.metaDesc %>">
+
+<meta property="og:title" content="<%= base.title %>" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="" />
-<meta property="og:image" content=">" />
+<meta property="og:image" content="<%= base.static %>images/livejournal.png" />
 <meta property="og:site_name" content="" />
 
 <meta property="fb:app_id" content="" />
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="<%= base.static %>images/livejournal.svg">
 <meta name="twitter:site" content="">
 
-<link rel="shortcut icon" href="" />
-<link rel="canonical" href="" />
+<link rel="shortcut icon" href="<%= base.static %>images/livejournal.png" />
+<link rel="canonical" href="g" />
 
 <%- include('_styles') -%>

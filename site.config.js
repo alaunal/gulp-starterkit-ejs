@@ -25,8 +25,8 @@ const DATA = {
     "base": {
         "static": "static/",
         "revid": makeId(8),
-        "title": "GULP TEMPLATEING | gojek site",
-        "metaDescript": ""
+        "title": "GULP Bolilerplate - Ejs | akcode",
+        "metaDesc": "A HTML templates using gulp and Ejs - support dynamic import with webpack-stream"
     }
 };
 

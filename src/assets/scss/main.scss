@@ -15,12 +15,16 @@
 // -- OBJECTS OF STYLES
 @import "objects/layout";
 @import "objects/table";
+@import "objects/button";
+@import "objects/card";
 
 
 // -- COMPONENTS OF STYLES
+@import "components/home";
 @import "components/docs";
 @import "components/calculator";
 @import "components/404";
+@import "components/footer";
 
 
 // -- HELPERS OF STYLES
