@@ -1,11 +1,11 @@
 
-# GULP BOILERPLATE
+# GULP BOILERPLATE EJS
 
-**GULP BOILERPLATE** is a tool that we designed to make it easier for developers (especially Front-end Developers) to create and create user interfaces as outlined in the visual web form of the design that has been determined.
+**GULP BOILERPLATE EJS** is a tool that we designed to make it easier for developers (especially Front-end Developers) to create and create user interfaces as outlined in the visual web form of the design that has been determined. [**Docs Pages**](https://boilerplate-ejs.netlify.app/)
 
 ## Features
 
-This **WEB UIKIT** provides a simple way of setting up a modern web development environment. Here is a list of the current features:
+This **WEB TEMPLATES** provides a simple way of setting up a modern web development environment. Here is a list of the current features:
 
 -  [**Webpack-stream**](https://www.npmjs.com/package/webpack-stream) run **webpack** as a stream to conveniently integrate with gulp.
 -  [**GULP 4**](https://gulpjs.com/) Automate and enhance your workflow.
