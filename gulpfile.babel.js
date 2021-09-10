@@ -124,8 +124,8 @@ gulp.task('runServer', () => {
         server: {
             baseDir: [cfg.paths.build]
         },
-        port: arg.port ? Number(arg.port) : 8080,
-        open: true
+        port: arg.port ? Number(arg.port) : 9000,
+        open: false
     });
 });
 
@@ -261,12 +261,36 @@ gulp.task('gulp:compile', function(callback) {
 // -- watch task runner
 
 gulp.task('gulp:watch', () => {
-    gulp.watch(cfg.paths.src, callback => {
+    gulp.watch(cfg.paths.styles.watch, callback => {
         runSequence(
-            'gulp:compile',
+            'compile-styles',
             'reload',
             callback
         );
+    });
+
+    gulp.watch(cfg.paths.scripts.watch, callback => {
+      runSequence(
+          'compile-scripts',
+          'reload',
+          callback
+      );
+    });
+
+    gulp.watch(cfg.paths.public.watch, callback => {
+      runSequence(
+          'compile-html',
+          'reload',
+          callback
+      );
+    });
+
+    gulp.watch(cfg.paths.libs + '**/*', callback => {
+      runSequence(
+          'copy-static',
+          'reload',
+          callback
+      );
     });
 });
 
